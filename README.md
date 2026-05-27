@@ -23,10 +23,13 @@ Un lead solo queda como `cualificado` cuando los cuatro puntos estan claros:
 - Empresa de servicios o consultoria.
 - Al menos 5 empleados.
 - Ubicacion en Espana o Latinoamerica.
-- Interes explicito en automatizacion o IA.
+- Interes en automatizacion, IA, automatizacion de ventas, procesos,
+  agentes, chatbots, CRM o eficiencia operativa.
 
 Si algun dato falta o no se puede confirmar, la decision es
-`no_cualificado`. El prompt indica al modelo que el texto del lead es dato no
+`no_cualificado`. El modelo devuelve `unknown` para datos no confirmados y el
+servidor vuelve a validar que los cuatro criterios esten cumplidos antes de
+aceptar `cualificado`. El prompt indica que el texto del lead es dato no
 confiable y que ignore instrucciones incluidas en el mismo.
 
 ## Archivos
